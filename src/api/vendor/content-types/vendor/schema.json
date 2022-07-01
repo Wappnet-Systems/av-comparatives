@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "singularName": "vendor",
+    "pluralName": "vendors",
+    "displayName": "vendors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo_farbe": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "screenshots": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Link": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "main_test_series_vendor": {
+      "type": "boolean",
+      "default": false
+    },
+    "main_test_series_vendor_enterprise": {
+      "type": "boolean",
+      "default": false
+    },
+    "logo_grau": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link_support": {
+      "type": "string"
+    },
+    "link_blog": {
+      "type": "string"
+    },
+    "link_tools": {
+      "type": "string"
+    },
+    "view_in_enterprise": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "view_in_consumer": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

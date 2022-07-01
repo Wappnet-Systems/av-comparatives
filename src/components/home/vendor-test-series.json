@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_vendor_vendor_test_series",
+  "info": {
+    "displayName": "vendor_test_series",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "vendors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor.vendor"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 100
+    }
+  }
+}
