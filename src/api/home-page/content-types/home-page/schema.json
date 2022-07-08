@@ -17,29 +17,6 @@
       "type": "component",
       "repeatable": false,
       "component": "home.header"
-    },
-    "Footer": {
-      "type": "component",
-      "repeatable": false,
-      "component": "global.footer"
-    },
-    "test_series_vendors": {
-      "displayName": "vendor_test_series",
-      "type": "component",
-      "repeatable": false,
-      "component": "home.vendor-test-series"
-    },
-    "latest_consumer_tests": {
-      "displayName": "latest_consumer_tests",
-      "type": "component",
-      "repeatable": false,
-      "component": "home.latest-consumer-tests"
-    },
-    "latest_enterprise_test": {
-      "displayName": "latest_enterprise_tests",
-      "type": "component",
-      "repeatable": false,
-      "component": "home.latest-enterprise-tests"
     }
   }
 }

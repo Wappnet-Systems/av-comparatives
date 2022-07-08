@@ -155,6 +155,15 @@
         "Update allowed",
         "False Alarm Test included"
       ]
+    },
+    "latest_consumer_tests": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "latest_enterprise_tests": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
