@@ -13,6 +13,7 @@
   "dependencies": {
     "@strapi/plugin-i18n": "4.2.0",
     "@strapi/plugin-users-permissions": "4.2.0",
+    "@strapi/provider-upload-aws-s3": "^4.2.2",
     "@strapi/strapi": "4.2.0",
     "mysql": "2.18.1",
     "strapi-plugin-menus": "^0.3.2"
