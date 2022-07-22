@@ -22,6 +22,26 @@ module.exports = ({env}) => ({
       },
     },
   },
+  ezforms:{
+    config:{
+      captchaProvider: {
+        name: 'recaptcha',
+        config: {
+          secretKey: env('CAPTCHA_SECRET_KEY'),
+          minimumScore: 0.5
+        }
+      },
+      notificationProviders: [
+        {
+          name: 'email',
+          enabled: true,
+          config: {
+            from: env('NOTIFICATION_EMAIL')
+          }
+        }
+      ]
+    }
+  },
   ckeditor: true
 
 });

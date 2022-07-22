@@ -17,6 +17,7 @@
     "@strapi/provider-upload-aws-s3": "^4.2.2",
     "@strapi/strapi": "4.2.0",
     "mysql": "2.18.1",
+    "strapi-plugin-ezforms": "0.0.7",
     "strapi-plugin-menus": "^0.3.2"
   },
   "author": {
