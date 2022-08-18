@@ -34,6 +34,7 @@ yarn build
 
 ## ⚙️ Deployment
 - command to run through pm2: pm2 start npm --name AV -- run start
+- pm2 start npm --name AV -- run develop
 - Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
 
 ## 📚 Learn more
