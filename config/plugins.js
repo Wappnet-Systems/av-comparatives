@@ -1,4 +1,4 @@
-module.exports = ({env}) => ({
+module.exports = ({ env }) => ({
   menus: {
     config: {
       maxDepth: 3,
@@ -6,13 +6,13 @@ module.exports = ({env}) => ({
   },
   upload: {
     config: {
-      provider: 'aws-s3',
+      provider: "aws-s3",
       providerOptions: {
-        accessKeyId: env('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: env('AWS_ACCESS_SECRET'),
-        region: env('AWS_REGION'),
+        accessKeyId: env("AWS_ACCESS_KEY_ID"),
+        secretAccessKey: env("AWS_ACCESS_SECRET"),
+        region: env("AWS_REGION"),
         params: {
-          Bucket: env('AWS_BUCKET'),
+          Bucket: env("AWS_BUCKET"),
         },
       },
       actionOptions: {
@@ -22,26 +22,37 @@ module.exports = ({env}) => ({
       },
     },
   },
-  ezforms:{
-    config:{
+  ezforms: {
+    config: {
       captchaProvider: {
-        name: 'recaptcha',
+        name: "recaptcha",
         config: {
-          secretKey: env('CAPTCHA_SECRET_KEY'),
-          minimumScore: 0.5
-        }
+          secretKey: env("CAPTCHA_SECRET_KEY"),
+          minimumScore: 0.5,
+        },
       },
       notificationProviders: [
         {
-          name: 'email',
+          name: "email",
           enabled: true,
           config: {
-            from: env('NOTIFICATION_EMAIL')
-          }
-        }
-      ]
-    }
+            from: env("NOTIFICATION_EMAIL"),
+          },
+        },
+      ],
+    },
   },
-  ckeditor: true
-
+  ckeditor: true,
+  email: {
+    config: {
+      provider: "sendgrid", // For community providers pass the full package name (e.g. provider: 'strapi-provider-email-mandrill')
+      providerOptions: {
+        apiKey: env("SENDGRID_API_KEY"),
+      },
+      settings: {
+        defaultFrom: env("CONTACT_FROM_EMAIL"),
+        testAddress: env("CONTACT_TEST_ADDRESS"),
+      },
+    },
+  },
 });
