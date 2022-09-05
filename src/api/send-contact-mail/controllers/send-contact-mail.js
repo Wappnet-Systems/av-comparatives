@@ -35,6 +35,7 @@ module.exports = {
       ctx.body = {
         error: true,
         message: "Contact mail sending failed.",
+        error: err,
       };
     }
   },
