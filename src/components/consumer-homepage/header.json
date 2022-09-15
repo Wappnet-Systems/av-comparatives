@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_consumer_homepage_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "topic": {
+      "displayName": "What are you interested in?",
+      "type": "component",
+      "repeatable": true,
+      "component": "consumer-homepage.what-are-you-interested-in"
+    }
+  }
+}

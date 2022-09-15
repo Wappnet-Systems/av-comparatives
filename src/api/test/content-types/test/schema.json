@@ -1,0 +1,169 @@
+{
+  "kind": "collectionType",
+  "collectionName": "latest_consumer_tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "Tests",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Introduction": {
+      "type": "richtext"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "revision_date": {
+      "type": "date"
+    },
+    "online_with_cloud_connectivity": {
+      "type": "boolean"
+    },
+    "update_allowed": {
+      "type": "boolean"
+    },
+    "false_alarm_test_included": {
+      "type": "boolean"
+    },
+    "platform_os": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "last_revision": {
+      "type": "date"
+    },
+    "number_of_testcases": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 500
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "testperiod_from": {
+      "type": "date"
+    },
+    "testperiod_to": {
+      "type": "date"
+    },
+    "chart_date": {
+      "required": true,
+      "type": "date"
+    },
+    "chart_label": {
+      "type": "string"
+    },
+    "add_to_comparison_charts": {
+      "type": "boolean",
+      "default": false
+    },
+    "award_date": {
+      "type": "enumeration",
+      "enum": [
+        "Testperiod From",
+        "Testperiod To",
+        "Chart Date",
+        "Year - Chart Date"
+      ],
+      "required": true
+    },
+    "hide_from_vendor_progress_charts": {
+      "type": "boolean",
+      "default": false
+    },
+    "hide_from_listings": {
+      "type": "boolean",
+      "default": false
+    },
+    "relatedTest": {
+      "type": "string"
+    },
+    "tested_products_Intro": {
+      "type": "richtext"
+    },
+    "tested_products_closing": {
+      "type": "richtext"
+    },
+    "test_procedure": {
+      "type": "richtext"
+    },
+    "testcases": {
+      "type": "richtext"
+    },
+    "ranking_system": {
+      "type": "richtext"
+    },
+    "test_results": {
+      "type": "richtext"
+    },
+    "notes": {
+      "type": "richtext"
+    },
+    "award_level_test": {
+      "type": "richtext"
+    },
+    "general_text": {
+      "type": "richtext"
+    },
+    "copyright": {
+      "type": "richtext"
+    },
+    "code": {
+      "type": "string"
+    },
+    "add_vendors_failed": {
+      "type": "boolean",
+      "default": true
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "recreate_awards": {
+      "type": "string"
+    },
+    "hide_from_shortinfo_box": {
+      "type": "enumeration",
+      "enum": [
+        "Online with cloud connectivity",
+        "Update allowed",
+        "False Alarm Test included"
+      ]
+    },
+    "latest_consumer_tests": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "latest_enterprise_tests": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_consumer_homepage_what_are_you_interested_in_s",
+  "info": {
+    "displayName": "What are you interested in?"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

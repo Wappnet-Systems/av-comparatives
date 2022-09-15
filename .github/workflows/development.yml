@@ -6,33 +6,23 @@ on:
     branches: [ development ]
 
 jobs:
-  web-deploy:
-
+  deploy:
     name: AV deploy
     runs-on: ubuntu-latest
 
     steps:
     - name: Get latest code
       uses: actions/checkout@v2.3.2
-    - uses: actions/checkout@master
-    - name: Use Node.js 16 LTS
-      uses: actions/setup-node@v2
+    - name: Deployment
+      uses: appleboy/ssh-action@v0.1.4
       with:
-        node-version: '16'
-      
-    - name: Install NPM Modules
-      run: npm install
+        host: ${{ secrets.SERVER }}
+        key: ${{ secrets.KEY }}
+        username: ${{ secrets.USER }}
 
-    - name: Build Project
-      run: npm run build
-    
-    
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "./build/"
-          REMOTE_HOST: ${{ secrets.SERVER }}
-          REMOTE_USER: ${{ secrets.USER }}
-          TARGET: '/var/www/html/av-comparatives/'
+        script: |
+          cd /var/www/av-comparatives/av-comparatives
+          git fetch origin development
+          git reset --hard origin/development
+          npm install
+          pm2 restart 0
